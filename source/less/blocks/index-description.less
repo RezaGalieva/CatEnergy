@@ -1,0 +1,45 @@
+.description--background-image {
+  background: url("/img/background/index-background-cat-green-min.jpg")
+    no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @green-opacity-85;
+  }
+}
+
+.description-wrapper {
+  position: relative;
+}
+
+.description-heading {
+  color: @white;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.description-logo {
+  font-family: "Oswald", sans-serif;
+  line-height: 14px;
+  color: @white;
+}
+
+.link-form-wrapper {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page-index-section-title {
+  font-size: 36px;
+  line-height: 40px;
+}
