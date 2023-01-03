@@ -1,33 +1,116 @@
+.program-wrapper {
+  .padding-left-right;
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px;
+  }
+}
+
 .program-slim-wrapper,
 .program-pro-wrapper {
   background-color: @gray-basic;
+
+  @media @tablet {
+    padding-top: 77px;
+    padding-left: 53px;
+    padding-bottom: 57px;
+  }
+
+  @media @desktop {
+    width: 570px;
+  }
+}
+
+.program-slim-wrapper {
+  @media @tablet {
+    padding-right: 62px;
+    margin-bottom: 30px;
+  }
+}
+
+.program-pro-wrapper {
+  @media @tablet {
+    padding-right: 28px;
+  }
 }
 
 .program-subtitle {
   text-transform: uppercase;
-}
 
-.program-subtitle-before {
-  content: "";
-  display: inline-block;
-  width: 70px;
-  height: 55px;
+  @media @tablet-desktop {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .program-subtitle--slim::before {
-  .program-subtitle-before;
-  background: url("/img/background/program-cat-lose-weight.svg") no-repeat;
+  .content-inline-block;
+  background: url("/img/background/program-cat-lose-weight.svg") no-repeat
+    center;
+  background-size: contain;
+
+  @media @mobile {
+    width: 70px;
+    height: 55px;
+  }
+
+  @media @tablet {
+    width: 200px;
+    height: 211px;
+    margin-left: 18px;
+    float: right;
+  }
+
+  @media @desktop {
+    width: 100px;
+    height: 106px;
+  }
 }
 
 .program-subtitle--pro::before {
-  .program-subtitle-before;
-  background: url("/img/background/program-cat-gain-weight.svg") no-repeat;
+  .content-inline-block;
+  background: url("/img/background/program-cat-gain-weight.svg") no-repeat
+    center;
+  background-size: contain;
+
+  @media @mobile {
+    width: 70px;
+    height: 55px;
+  }
+
+  @media @tablet {
+    width: 268px;
+    height: 200px;
+    margin-left: 18px;
+    float: right;
+  }
+
+  @media @desktop {
+    width: 134px;
+    height: 100px;
+  }
 }
 
 .program-link--arrow::after {
-  content: "";
-  display: inline-block;
+  .content-inline-block;
   width: 24px;
   height: 12px;
   background: url("/img/icon/icon-arrow.svg") no-repeat;
+}
+
+.program-description {
+  @media @tablet-desktop {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.program-link {
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
