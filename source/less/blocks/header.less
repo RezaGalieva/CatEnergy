@@ -20,11 +20,14 @@
 
 .page-header-logo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  min-width: 276px;
   min-height: 38px;
   margin: 12px;
+
+  @media @mobile {
+    width: 100%;
+  }
 }
 
 .page-header-link-mobile {
