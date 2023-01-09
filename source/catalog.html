@@ -3,32 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <title>Каталог товаров</title>
+    <meta name="viewport" content="width=device-width" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header-logo" href="index.html">
-        <img src="img\logo-cat-energy.svg" alt="logotype Cat Energy" />
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav-toggle" type="button">
+      <div class="page-header-logo">
+        <a class="page-header-link-mobile" href="index.html">
+          <img src="/img/logo-cat-mobile.svg" alt="logotype Cat Energy" />
+        </a>
+        <a class="page-header-link-mobile" href="index.html">
+          <img
+            src="/img/cat-energy-text-logo-mobile.svg"
+            alt="logotype Cat Energy"
+          />
+        </a>
+        <a class="page-header-link-desktop" href="index.html">
+          <img
+            class="page-header-desktop-img"
+            src="/img/logo-cat-energy.svg"
+            alt="logotype Cat Energy"
+          />
+        </a>
+
+        <button class="page-header-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav-wrapper">
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav-vrapper">
           <ul class="main-nav-list">
+            <li class="main-nav-list">
+              <a class="main-nav-link" href="index.html">Главная</a>
+            </li>
             <li class="main-nav-list site-list--active">
-              <a href="index.html">Главная</a>
+              <a class="main-nav-link" href="#">Каталог продукции</a>
             </li>
             <li class="main-nav-list">
-              <a href="">Каталог продукции</a>
-            </li>
-            <li class="main-nav-list">
-              <a href="form.html">Подбор программы</a>
+              <a class="main-nav-link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main class="page-catalog">
       <h1>Каталог продукции</h1>
       <section class="product">

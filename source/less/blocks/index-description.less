@@ -1,45 +1,161 @@
+.green-content {
+  &::before {
+    .before-content;
+    background-color: @green-opacity-85;
+  }
+}
+
 .description--background-image {
   background: url("/img/background/index-background-cat-green-min.jpg")
     no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-  width: 100vw;
-  height: 100vw;
+  position: absolute;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  @media @mobile {
+    width: 100vw;
+    height: 302px;
+    .green-content;
+  }
+
+  @media @desktop {
+    width: 50%;
+    height: 694px;
     right: 0;
-    bottom: 0;
-    background-color: @green-opacity-85;
+    top: 0;
+    z-index: 0;
+    .green-content;
   }
 }
 
 .description-wrapper {
+  .padding-left-right;
   position: relative;
+
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media @tablet {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: start;
+    justify-content: space-around;
+  }
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 80px;
+  }
 }
 
 .description-heading {
-  color: @white;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 60px;
+  line-height: 60px;
+
+  @media @mobile {
+    color: @white;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  @media @tablet {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media @desktop {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 2;
+  }
 }
 
 .description-logo {
   font-family: "Oswald", sans-serif;
-  line-height: 14px;
-  color: @white;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+
+  @media @mobile {
+    color: @white;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 28px;
+  }
+
+  @media @tablet {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media @desktop {
+    position: relative;
+    top: -280px;
+  }
 }
 
-.link-form-wrapper {
-  font-size: 14px;
-  line-height: 18px;
+.description-img {
+  &::before {
+    .before-content;
+  }
+
+  @media @mobile {
+    background: url("/img/main-page-product-mobile.svg") no-repeat;
+    width: 280px;
+    height: 270px;
+  }
+
+  @media @tablet {
+    grid-row-end: 4;
+    background: url("/img/main-page-product-tablet.svg") no-repeat;
+    width: 708px;
+    height: 608px;
+  }
+
+  @media @desktop {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    background: url("/img/main-page-product-desktop.svg") no-repeat;
+    width: 552px;
+    height: 499px;
+    position: relative;
+    right: 190px;
+  }
 }
 
-.page-index-section-title {
-  font-size: 36px;
-  line-height: 40px;
+.description-link-form {
+  @media @mobile {
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 2;
+  }
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media @tablet {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    width: 244px;
+    height: 54px;
+    margin-top: 48px;
+    position: absolute;
+  }
+
+  @media @desktop {
+    grid-column-start: 1;
+    width: 244px;
+    height: 54px;
+    position: relative;
+    top: -220px;
+    z-index: 2;
+  }
 }

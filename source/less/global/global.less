@@ -1,8 +1,18 @@
+body {
+  margin: 0;
+}
+
 .page {
   font-family: "Oswald", sans-serif;
+
+  @media @desktop {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 h1,
+h2,
 h3 {
   font-weight: 400;
 }
@@ -22,11 +32,13 @@ p {
   color: @black-special-1;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
 }
 
 a {
   text-decoration: none;
   color: @black;
+  font-weight: 400;
 }
 
 .text-uppercase {
@@ -39,6 +51,11 @@ li {
 
 ul {
   padding-left: 0;
+}
+
+.basic-button {
+  background-color: @green-basic;
+  color: @white;
 }
 
 button {
@@ -63,4 +80,35 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.before-content {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content-inline-block {
+  content: "";
+  display: inline-block;
+}
+
+.padding-left-right {
+  @media @mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media @tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media @desktop {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

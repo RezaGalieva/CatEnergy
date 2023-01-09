@@ -1,5 +1,31 @@
 .page-footer {
-  background-color: @gray-basic;
+  position: relative;
+}
+
+.page-footer-contacts {
+  display: flex;
+  justify-content: space-between;
+
+  @media @mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media @tablet {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media @desktop {
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    background-color: @white;
+    width: 570px;
+    height: 200px;
+    top: 100px;
+    left: 110px;
+  }
 }
 
 .copyright-link--logo::after {
@@ -10,18 +36,98 @@
   background: url("/img/icon/icon-html-academy.svg") no-repeat;
 }
 
+.contacts-title {
+  font-family: "Oswald", sans-serif;
+
+  @media @mobile {
+    font-size: 16px;
+    line-height: 18px;
+    width: 140px;
+  }
+
+  @media @tablet-desktop {
+    font-size: 20px;
+    line-height: 21px;
+    width: 160px;
+  }
+}
+
+.contacts-address {
+  @media @mobile {
+    font-size: 14px;
+    line-height: 20px;
+    width: 140px;
+  }
+
+  @media @tablet {
+    text-align: right;
+  }
+
+  @media @tablet-desktop {
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+  }
+}
+
+.footer-map {
+  width: 100%;
+
+  @media @mobile {
+    height: 362px;
+  }
+
+  @media @tablet-desktop {
+    height: 400px;
+  }
+}
+
+.page-footer-social {
+  .padding-left-right;
+  background-color: @gray-basic;
+  display: flex;
+
+  @media @mobile {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  @media @tablet-desktop {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.main-page-link {
+  @media @mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media @tablet-desktop {
+    gap: 28px;
+  }
+}
+
 .copyright-link {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
-}
+  display: flex;
+  align-items: center;
 
-.contacts-title {
-  font-size: 16px;
-  line-height: 18px;
-}
+  @media @mobile {
+    justify-content: space-between;
+  }
 
-.contacts-address {
-  font-size: 14px;
-  line-height: 20px;
+  @media @tablet-desktop {
+    gap: 22px;
+  }
 }
