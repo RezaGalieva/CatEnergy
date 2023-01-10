@@ -53,13 +53,11 @@
 }
 
 .description-heading {
-  font-size: 60px;
-  line-height: 60px;
+  .text-size-60-60;
 
   @media @mobile {
+    .text-size-36-36;
     color: @white;
-    font-size: 36px;
-    line-height: 36px;
     text-align: center;
   }
 
@@ -76,15 +74,13 @@
 }
 
 .description-logo {
+  .text-size-20-20;
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
   margin: 0;
 
   @media @mobile {
+    .text-size-14-14;
     color: @white;
-    font-size: 14px;
-    line-height: 14px;
     margin-bottom: 28px;
   }
 
@@ -130,14 +126,12 @@
 
 .description-link-form {
   @media @mobile {
-    font-size: 14px;
-    line-height: 18px;
+    .text-size-14-18;
     z-index: 2;
   }
 
   @media @tablet-desktop {
-    font-size: 20px;
-    line-height: 20px;
+    .text-size-20-20;
   }
 
   @media @tablet {
