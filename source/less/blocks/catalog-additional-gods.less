@@ -1,17 +1,103 @@
+.additional-gods {
+  @media @desktop {
+    display: flex;
+    gap: 80px;
+  }
+}
+
 .additional-gods-title {
-  text-transform: uppercase;
-  font-size: 24px;
-  line-height: 24px;
+  @media @mobile {
+    .text-size-24-24;
+  }
+
+  @media @tablet-desktop {
+    .text-size-36-36;
+  }
+}
+
+.additional-gods_list {
+  @media @desktop {
+    width: 895px;
+  }
 }
 
 .additional-gods_name {
   text-transform: uppercase;
-  font-size: 16px;
-  line-height: 16px;
+
+  @media @mobile {
+    .text-size-16-16;
+  }
+
+  @media @tablet {
+    margin: 0;
+  }
 }
 
 .additional-gods_volume,
 .additional-gods_price {
-  font-size: 14px;
-  line-height: 14px;
+  @media @mobile {
+    .text-size-14-14;
+  }
+
+  @media @tablet-desktop {
+    .text-size-16-20;
+  }
+}
+
+.additional-gods_item {
+  display: grid;
+
+  @media @mobile {
+    grid-template-columns: auto auto;
+  }
+
+  @media @tablet {
+    grid-template-columns: auto auto 90px;
+    border: 1px solid @gray-dark-3;
+    align-items: center;
+    padding: 28px 38px 28px 38px;
+  }
+
+  @media @desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.additional-gods_volume {
+  @media @mobile {
+    grid-row-start: 2;
+  }
+
+  @media @tablet {
+    text-align: right;
+  }
+
+  @media @desktop {
+    padding-left: 80px;
+  }
+}
+
+.additional-gods_price {
+  text-align: right;
+
+  @media @mobile {
+    grid-row-start: 2;
+  }
+
+  @media @desktop {
+    padding-right: 38px;
+  }
+}
+
+.additional_button {
+  @media @mobile {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  @media @tablet {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
