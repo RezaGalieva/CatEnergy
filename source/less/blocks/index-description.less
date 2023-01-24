@@ -125,19 +125,24 @@
 }
 
 .description-link-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media @mobile {
     .text-size-14-18;
     z-index: 2;
+    width: 100%;
   }
 
   @media @tablet-desktop {
     .text-size-20-20;
+    grid-column-start: 1;
   }
 
   @media @tablet {
     grid-row-start: 3;
     grid-row-end: 4;
-    grid-column-start: 1;
     width: 244px;
     height: 54px;
     margin-top: 48px;
@@ -145,7 +150,6 @@
   }
 
   @media @desktop {
-    grid-column-start: 1;
     width: 244px;
     height: 54px;
     position: relative;
