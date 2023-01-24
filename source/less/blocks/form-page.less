@@ -1,11 +1,24 @@
 // Global settings and text size of form page
-
-.page-form {
+.page-form-subtitle {
   .padding-left-right;
+  margin: 0;
+
+  @media @mobile {
+    .text-size-36-36;
+    padding-top: 26px;
+  }
 
   @media @tablet {
+    padding-top: 64px;
     padding-left: 70px;
-    padding-right: 70px;
+  }
+
+  @media @desktop {
+    padding-top: 74px;
+  }
+
+  @media @tablet-desktop {
+    .text-size-60-60;
   }
 }
 
@@ -15,28 +28,40 @@
   margin: 0;
 
   @media @mobile {
-    padding-bottom: 38px;
     padding-top: 38px;
+    padding-bottom: 38px;
+    padding-left: 20px;
+  }
+
+  @media @tablet {
+    padding-left: 70px;
+  }
+
+  @media @desktop {
+    padding-left: 110px;
   }
 
   @media @tablet-desktop {
     .text-size-20-30;
-    padding-bottom: 54px;
-    padding-top: 66px;
+    padding-top: 54px;
+    padding-bottom: 66px;
+  }
+}
+
+.form-section-title {
+  @media @mobile {
+    padding-left: 20px;
+    white-space: initial;
+  }
+
+  @media @tablet {
+    padding-left: 34px;
   }
 }
 
 .program-selection_form {
   display: flex;
   flex-direction: column;
-
-  @media @mobile {
-    gap: 24px;
-  }
-
-  @media @tablet {
-    gap: 72px;
-  }
 }
 
 .data-program-wrapper {
@@ -74,10 +99,12 @@
 
     @media @mobile {
       .text-size-16-18;
+      padding-left: 16px;
     }
 
     @media @tablet-desktop {
       .text-size-20-30;
+      padding-left: 18px;
     }
   }
 }

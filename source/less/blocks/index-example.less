@@ -1,49 +1,84 @@
 .example-wrapper {
+  .example-wrapper_content {
+    content: "";
+    background-color: @gray-basic;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
   .padding-left-right;
   position: relative;
 
   @media @mobile {
     background-color: @gray-basic;
+    padding-top: 27px;
+    padding-bottom: 32px;
   }
 
   @media @tablet {
     display: grid;
     grid-template-columns: 50% auto;
-    grid-template-rows: auto auto auto auto;
+    padding-bottom: 70px;
+    margin-top: 42px;
+
+    &::after {
+      .example-wrapper_content;
+      height: 462px;
+    }
   }
 
   @media @desktop {
     display: grid;
     grid-template-columns: 436px 1fr;
-    grid-template-rows: auto auto auto auto;
-  }
+    grid-template-rows: 206px 164px 132px auto;
+    padding-bottom: 74px;
+    margin-top: 30px;
 
-  @media @tablet-desktop {
     &::after {
-      content: "";
-      background-color: @gray-basic;
-      padding: 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 462px;
-      z-index: -1;
+      .example-wrapper_content;
+      height: 500px;
     }
   }
 }
 
+.example-title {
+  margin: 0;
+
+  @media @mobile {
+    padding-bottom: 32px;
+  }
+
+  @media @tablet {
+    padding-bottom: 62px;
+  }
+
+  @media @desktop {
+    padding-top: 20px;
+  }
+}
+
 .example-description {
-  @media @tablet-desktop {
-    .text-size-16-24;
+  margin: 0;
+
+  @media @mobile {
+    padding-bottom: 25px;
   }
 
   @media @tablet {
     grid-column-start: 1;
     grid-column-end: -1;
+    padding-bottom: 54px;
   }
 
   @media @desktop {
     grid-column-start: 1;
+  }
+
+  @media @tablet-desktop {
+    .text-size-16-24;
   }
 }
 
@@ -136,7 +171,8 @@
   @media @mobile {
     justify-content: center;
     gap: 5px;
-    padding-bottom: 52px;
+    padding-top: 25px;
+    padding-bottom: 42px;
   }
 
   @media @tablet {
@@ -146,6 +182,7 @@
   }
 
   @media @desktop {
+    align-items: flex-end;
     gap: 62px;
   }
 }
@@ -168,6 +205,7 @@
   @media @tablet {
     grid-column-start: 1;
     grid-column-end: -1;
+    padding-top: 58px;
   }
 
   @media @desktop {
@@ -209,6 +247,10 @@
 .cat-example-toggles {
   text-align: center;
   margin: 0;
-  padding-top: 28px;
-  padding-bottom: 52px;
+}
+
+.slider-toggle {
+  @media @tablet-desktop {
+    .text-size-20-30;
+  }
 }

@@ -1,23 +1,66 @@
 .additional-gods {
+  @media @mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   @media @desktop {
     display: flex;
     gap: 80px;
   }
 }
 
-.additional-gods-title {
+.additional-gods_wrapper {
   @media @mobile {
-    .text-size-24-24;
+    padding-bottom: 40px;
   }
 
-  @media @tablet-desktop {
-    .text-size-36-36;
+  @media @tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 68px;
   }
 }
 
 .additional-gods_list {
+  @media @tablet {
+    border: 1px solid @gray-dark-3;
+  }
+
   @media @desktop {
     width: 895px;
+    padding-left: 110px;
+  }
+}
+
+.additional-gods_item {
+  display: grid;
+
+  @media @mobile {
+    grid-template-columns: auto auto;
+    padding-bottom: 20px;
+    border-top: 1px solid @gray-dark-3;
+
+    &:nth-last-child(1) {
+      border-bottom: 1px solid @gray-dark-3;
+    }
+  }
+
+  @media @tablet {
+    grid-template-columns: auto auto 90px;
+    border-bottom: 1px solid @gray-dark-3;
+    align-items: center;
+    padding: 28px 38px;
+  }
+
+  @media @desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    border-top: 1px solid @gray-dark-3;
+
+    &:nth-last-child(1) {
+      border-bottom: 1px solid @gray-dark-3;
+    }
   }
 }
 
@@ -30,6 +73,11 @@
 
   @media @tablet {
     margin: 0;
+    padding-bottom: 26px;
+  }
+
+  @media @desktop {
+    margin: 0;
   }
 }
 
@@ -41,26 +89,7 @@
 
   @media @tablet-desktop {
     .text-size-16-20;
-  }
-}
-
-.additional-gods_item {
-  display: grid;
-
-  @media @mobile {
-    grid-template-columns: auto auto;
-  }
-
-  @media @tablet {
-    grid-template-columns: auto auto 90px;
-    border: 1px solid @gray-dark-3;
-    align-items: center;
-    padding: 28px 38px 28px 38px;
-  }
-
-  @media @desktop {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
+    margin: 0;
   }
 }
 
@@ -94,10 +123,18 @@
   @media @mobile {
     grid-column-start: 1;
     grid-column-end: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media @tablet {
     grid-column-start: 1;
     grid-column-end: -1;
+  }
+
+  @media @desktop {
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 }

@@ -13,6 +13,11 @@
 .program-pro-wrapper {
   background-color: @gray-basic;
 
+  @media @mobile {
+    padding: 22px 20px;
+    margin-top: 22px;
+  }
+
   @media @tablet {
     padding-top: 77px;
     padding-left: 53px;
@@ -21,6 +26,9 @@
 
   @media @desktop {
     width: 570px;
+    padding-top: 42px;
+    padding-right: 52px;
+    padding-bottom: 58px;
   }
 }
 
@@ -28,6 +36,10 @@
   @media @tablet {
     padding-right: 62px;
     margin-bottom: 30px;
+  }
+
+  @media @desktop {
+    padding-left: 52px;
   }
 }
 
@@ -39,6 +51,21 @@
 
 .program-subtitle {
   text-transform: uppercase;
+  margin: 0;
+
+  @media @mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  @media @tablet {
+    padding-bottom: 8px;
+  }
+
+  @media @desktop {
+    display: flex;
+    align-items: center;
+  }
 
   @media @tablet-desktop {
     .text-size-36-36;
@@ -54,6 +81,7 @@
   @media @mobile {
     width: 70px;
     height: 55px;
+    margin-right: 20px;
   }
 
   @media @tablet {
@@ -66,6 +94,7 @@
   @media @desktop {
     width: 100px;
     height: 106px;
+    margin-right: 62px;
   }
 }
 
@@ -78,6 +107,7 @@
   @media @mobile {
     width: 70px;
     height: 55px;
+    margin-right: 20px;
   }
 
   @media @tablet {
@@ -90,6 +120,49 @@
   @media @desktop {
     width: 134px;
     height: 100px;
+    margin-left: 32px;
+    margin-right: 46px;
+  }
+}
+
+.program-description {
+  @media @mobile {
+    border-bottom: 1px solid @gray-dark-4;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin: 0;
+  }
+
+  @media @tablet-desktop {
+    .text-size-16-24;
+  }
+}
+
+.program-description--pro,
+.program-link--pro {
+  @media @desktop {
+    padding-left: 52px;
+  }
+}
+
+.program-link {
+  display: flex;
+  align-items: center;
+
+  @media @mobile {
+    padding-top: 22px;
+  }
+
+  @media @tablet {
+    padding-top: 52px;
+  }
+
+  @media @desktop {
+    padding-top: 28px;
+  }
+
+  @media @tablet-desktop {
+    .text-size-20-30;
   }
 }
 
@@ -98,16 +171,12 @@
   width: 24px;
   height: 12px;
   background: url("/img/icon/icon-arrow.svg") no-repeat;
-}
 
-.program-description {
-  @media @tablet-desktop {
-    .text-size-16-24;
+  @media @mobile {
+    margin-left: 15px;
   }
-}
 
-.program-link {
   @media @tablet-desktop {
-    .text-size-20-30;
+    margin-left: 25px;
   }
 }

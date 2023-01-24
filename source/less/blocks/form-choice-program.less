@@ -2,11 +2,54 @@
   display: flex;
   flex-direction: column;
 
+  @media @mobile {
+    position: relative;
+    border-top: 1px solid @gray-dark-4;
+    border-bottom: 1px solid @gray-dark-4;
+    padding-bottom: 26px;
+  }
+
+  @media @tablet {
+    justify-content: center;
+    height: 196px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
   @media @desktop {
     width: 570px;
-    border: 1px solid @gray-light;
     padding-top: 30px;
     padding-bottom: 30px;
-    gap: 23px;
+  }
+
+  @media @tablet-desktop {
+    border: 1px solid @gray-light;
+    gap: 22px;
+  }
+}
+
+.choice-program_label {
+  @media @mobile {
+    padding-top: 26px;
+    padding-left: 20px;
+  }
+}
+
+.program-selection_text,
+.program-choice_text {
+  @media @mobile {
+    .text-size-16-18;
+  }
+
+  @media @tablet-desktop {
+    .text-size-20-30;
+  }
+}
+
+.program-choice_text {
+  .text-uppercase;
+
+  @media @tablet-desktop {
+    padding-left: 28px;
   }
 }

@@ -1,13 +1,33 @@
-.comment_input {
+.comment_wrapper {
+  .padding-left-right;
+
+  @media @tablet {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.comment_textarea {
+  .text-uppercase;
+  font-family: "Oswald", sans-serif;
+  color: @black-special-1;
   resize: none;
   border: 1px solid @gray-light;
   width: 100%;
+  padding-top: 10px;
+  padding-left: 16px;
 
   @media @mobile {
+    .text-size-16-18;
     height: 150px;
   }
 
   @media @tablet-desktop {
+    .text-size-20-30;
     height: 174px;
+  }
+
+  &::placeholder {
+    padding-top: 10px;
   }
 }

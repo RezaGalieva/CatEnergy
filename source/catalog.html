@@ -33,13 +33,13 @@
       <nav class="main-nav">
         <div class="main-nav-vrapper">
           <ul class="main-nav-list">
-            <li class="main-nav-list">
+            <li class="main-nav-item">
               <a class="main-nav-link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav-list site-list--active">
+            <li class="main-nav-item site-list--active">
               <a class="main-nav-link" href="#">Каталог продукции</a>
             </li>
-            <li class="main-nav-list">
+            <li class="main-nav-item">
               <a class="main-nav-link" href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -48,7 +48,7 @@
     </header>
 
     <main class="page-catalog">
-      <h1>Каталог продукции</h1>
+      <h1 class="page-subtitle">Каталог продукции</h1>
       <section class="product">
         <div class="product_wrapper">
           <h2 class="visually-hidden">Каталог</h2>
@@ -63,7 +63,7 @@
               </a>
               <h3 class="product_name">Cat Energy PRO 500 г</h3>
               <table class="product_features">
-                <tr>
+                <tr class="product_features--table">
                   <td>Масса</td>
                   <td class="product_table-date">
                     <span class="product_weight">500</span> г
@@ -282,7 +282,7 @@
                 <h3 class="product-show-more_heading text-uppercase">
                   Показать еще 100500 товаров
                 </h3>
-                <p class="product-show-more_description product_features">
+                <p class="product-show-more_description">
                   На самом деле вкусов гораздо больше!
                 </p>
                 <button class="product_button product-show-more_button">
@@ -296,7 +296,7 @@
 
       <section class="additional-gods">
         <div class="additional-gods_wrapper">
-          <h2 class="additional-gods-title">Дополнительные товары</h2>
+          <h2 class="subtitle-and-line">Дополнительные товары</h2>
           <ul class="additional-gods_list">
             <li class="additional-gods_item">
               <h3 class="additional-gods_name">Сахарозаменитель</h3>
@@ -346,5 +346,72 @@
         </div>
       </section>
     </main>
+
+    <footer class="page-footer">
+      <div class="page-footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts-title text-uppercase">
+          Приглашаем к сотрудничеству дилеров!
+        </p>
+        <p class="contacts-address">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+      </div>
+      <div class="page-footer-map">
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586858!2d30.320853351766026!3d59.93871648178724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1668595481819!5m2!1sru!2sge"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="footer-map"
+        ></iframe>
+      </div>
+      <div class="page-footer-social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <a class="main-page-link" href="index.html">
+          <img src="img/footer-logo.svg" alt="cat energy logotype link" />
+          <p class="visually-hidden">Cat Energy</p>
+        </a>
+        <ul class="social-list">
+          <li class="social-item">
+            <a
+              class="social-link social-link--vkontakte"
+              href="https://vk.com/htmlacademy"
+            >
+              <img src="/img/icon/icon-vk.svg" alt="vkontakte" />
+              <p class="visually-hidden">Мы в Вконтакте</p>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link social-link--facebook"
+              href="https://www.facebook.com/htmlacademy"
+            >
+              <img src="/img/icon/icon-facebook.svg" alt="facebook" />
+              <p class="visually-hidden">Мы в Фейсбуке</p>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link social-link--instagram"
+              href="https://www.instagram.com/htmlacademy"
+            >
+              <img src="/img/icon/icon-instagram.svg" alt="instagram" />
+              <p class="visually-hidden">Мы в Инстаграме</p>
+            </a>
+          </li>
+        </ul>
+        <div class="copyright-link-wrapper">
+          <a
+            class="copyright-link copyright-link--logo"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
+            HTML Academy
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
