@@ -28,3 +28,40 @@
     width: 570px;
   }
 }
+
+.cat-owner_email {
+  background: url("/img/icon/icon-email.svg") no-repeat;
+
+  &:focus {
+    background: url("/img/icon/icon-email-focus.svg") no-repeat;
+  }
+}
+
+.cat-owner_telephone {
+  background: url("/img/icon/icon-phone.svg") no-repeat;
+
+  &:focus {
+    background: url("/img/icon/icon-phone-focus.svg") no-repeat;
+  }
+}
+
+.cat-owner_email,
+.cat-owner_telephone {
+  @media @mobile {
+    background-position: right 16px bottom 16px;
+  }
+
+  @media @tablet-desktop {
+    background-position: right 20px bottom 18px;
+  }
+
+  &:focus {
+    @media @mobile {
+      background-position: right 16px bottom 16px;
+    }
+
+    @media @tablet-desktop {
+      background-position: right 20px bottom 18px;
+    }
+  }
+}
