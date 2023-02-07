@@ -82,30 +82,26 @@
 }
 
 .program-input--textarea {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
   border: 1px solid @gray-light;
   width: 100%;
 
   @media @mobile {
+    .text-size-16-18;
     height: 45px;
+    padding-left: 16px;
   }
 
   @media @tablet-desktop {
+    .text-size-20-30;
     height: 52px;
+    padding-left: 18px;
   }
 
-  &::placeholder {
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-
-    @media @mobile {
-      .text-size-16-18;
-      padding-left: 16px;
-    }
-
-    @media @tablet-desktop {
-      .text-size-20-30;
-      padding-left: 18px;
-    }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px @black-special-1;
   }
 }
 
@@ -120,5 +116,23 @@
 
   @media @tablet-desktop {
     .text-size-36-36;
+  }
+}
+
+// Custom checkbox
+
+.choice-program_label,
+.optional_label {
+  display: block;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
   }
 }

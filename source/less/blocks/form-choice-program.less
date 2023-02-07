@@ -29,6 +29,10 @@
 }
 
 .choice-program_label {
+  display: flex;
+  align-items: center;
+  position: relative;
+
   @media @mobile {
     padding-top: 26px;
     padding-left: 20px;
@@ -37,6 +41,8 @@
 
 .program-selection_text,
 .program-choice_text {
+  .text-uppercase;
+
   @media @mobile {
     .text-size-16-18;
   }
@@ -47,9 +53,53 @@
 }
 
 .program-choice_text {
-  .text-uppercase;
+  @media @mobile {
+    padding-left: 45px;
+  }
 
   @media @tablet-desktop {
-    padding-left: 28px;
+    padding-left: 88px;
+  }
+}
+
+.program-choice_checkmark {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid @gray-dark-3;
+
+  @media @mobile {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media @tablet-desktop {
+    width: 40px;
+    height: 40px;
+    margin-left: 28px;
+  }
+}
+
+.choice-program_label:hover input ~ .program-choice_checkmark {
+  border: 1px solid @gray-dark-6;
+}
+
+.choice-program_label input:checked ~ .program-choice_checkmark::after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  background-color: @green-basic;
+
+  @media @mobile {
+    width: 14px;
+    height: 14px;
+    top: 8px;
+    left: 8px;
+  }
+
+  @media @tablet-desktop {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
   }
 }
