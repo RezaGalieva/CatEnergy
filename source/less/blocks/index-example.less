@@ -242,31 +242,22 @@
 }
 
 .cat-example--cat-fat {
-  &::before {
-    .cat-wrapper;
+  .cat-wrapper;
+  background: url("/img/cat-fat.svg") no-repeat center;
+  background-size: contain;
 
-    content: "";
-    background: url("/img/cat-fat.svg") no-repeat center;
-    background-size: contain;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("/img/cat-fat@2x.svg");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/cat-fat@2x.svg");
   }
 }
 
 .cat-example--cat-slim {
-  &::after {
-    .cat-wrapper;
+  .cat-wrapper;
+  background: url("/img/cat-skinny.svg") no-repeat center;
+  background-size: contain;
 
-    content: "";
-    position: absolute;
-    background: url("/img/cat-skinny.svg") no-repeat center;
-    background-size: contain;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("/img/cat-skinny@2x.svg");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/cat-skinny@2x.svg");
   }
 }
 
@@ -304,75 +295,24 @@
   display: flex;
   align-items: center;
   position: relative;
-
-  @media @mobile {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  @media @tablet-desktop {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .control-slider {
   position: absolute;
-
-  @media @mobile {
-    width: 35px;
-    height: 6px;
-    background-color: @green-basic;
-    border-radius: 6px;
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-
-  @media @tablet-desktop {
-    left: 214px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    background-color: @white;
-    border: 1px solid @gray-dark-3;
-    border-radius: 50%;
-    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
-
-    &:hover {
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
-    }
-
-    &:active {
-      border: 1px solid @green-basic;
-      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-    }
-  }
-}
-
-.control-slider-inside {
-  @media @tablet-desktop {
-    width: 8px;
-    height: 8px;
-    background-color: @green-basic;
-    border-radius: 50%;
-  }
+  width: 35px;
+  height: 6px;
+  background-color: @green-basic;
+  border-radius: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .scale-before-after {
-  @media @mobile {
-    width: 84px;
-    height: 14px;
-    background-color: @white;
-    border: 1px solid @gray-dark-3;
-    border-radius: 6px;
-  }
-
-  @media @tablet-desktop {
-    width: 428px;
-    height: 6px;
-    background-color: @gray-dark-5;
-    border-radius: 6px;
-  }
+  width: 94px;
+  height: 14px;
+  background-color: @white;
+  border: 1px solid @gray-dark-3;
+  border-radius: 6px;
 }
