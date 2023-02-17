@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width" initial-scale />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="favicon-32x32.ico" />
     <link rel="icon" href="/img/favicon/favicon-16x16.svg" />
     <link rel="icon" href="/img/favicon/favicon-32x32.svg" />
@@ -181,9 +181,9 @@
               <span class="result-description--number">15 000</span> руб.
             </p>
           </div>
-          <div
-            class="cat-example-wrapper cat-example--cat-fat cat-example--cat-slim slider"
-          >
+          <div class="cat-example-wrapper slider">
+            <div class="cat-fat cat-example--cat-fat"></div>
+            <div class="cat-slim"></div>
             <div class="example-slider-wrapper">
               <button
                 class="slider-button text-uppercase slider-button--before"
@@ -192,9 +192,8 @@
               </button>
 
               <div class="control-wrapper">
-                <div class="control-slider">
-                  <div class="control-slider-inside"></div>
-                </div>
+                <div class="control-slider"></div>
+
                 <div class="scale-before-after"></div>
               </div>
 
@@ -304,6 +303,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.min.js" type="module"></script>
   </body>
 </html>
